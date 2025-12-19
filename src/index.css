@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Declarar colores personalizados */
+    --color-surface: #f8f6f6;
+    --color-surface-inverse: #121212;
+    --color-content: #121212;
+    --color-content-inverse: #f8f6f6;
+    --color-content-gray-light: #e0e0e0;
+    --color-content-gray-dark: #717171;
+
+  /* Configurar Montserrat como la fuente sans por defecto */
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    /* Configuraciones del modo oscuro */
+    .dark {
+        --color-surface: #121212;
+        --color-surface-inverse: #f8f6f6;
+        --color-content: #f8f6f6;
+        --color-content-inverse: #121212;
+        --color-content-gray-light: #1f1f1f;
+        --color-content-gray-dark: #8E8E8E;
+    }
+}
