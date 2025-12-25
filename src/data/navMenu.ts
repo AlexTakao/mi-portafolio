@@ -2,8 +2,8 @@ import type { NavMenuGroup } from "../types/nav";
 
 export const NAV_MENUS: NavMenuGroup = {
     home: [
-        { label: "Sobre mí", href: "/" },
-        { label: "Proyectos", href: "/projects" },
-        { label: "Contacto", href: "/contact" },
+        { label: "NAV.ABOUT", href: "/" },
+        { label: "NAV.PROJECTS", href: "/projects" },
+        { label: "NAV.CONTACT", href: "/contact" },
     ],
 };

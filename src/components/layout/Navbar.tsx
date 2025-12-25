@@ -3,11 +3,17 @@ import { NAV_MENUS } from "../../data/navMenu";
 import type { NavbarProps } from "../../types/nav";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
     const location: string = useLocation().pathname;
     const routes = NAV_MENUS[section] ?? [];
     const menuRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
+
+    routes.forEach((r)=>{
+        console.log(r.label);
+    })
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -47,7 +53,7 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
                             )}
 
                             <span className={`relative z-10 ${active ? "text-content-gray-light font-bold" : ""}`}>
-                                {route.label}
+                                {t(route.label)}
                             </span>
                         </Link>
                     );
@@ -64,7 +70,7 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
                     {
                         routes.map((route) => (
                             <Link onClick={() => setOpenMenu(!openMenu)} to={route.href} key={route.href} className={`border border-content-gray-dar bg-surface text-content-gray-dark text-base p-2.5 ${location === route.href && 'font-bold'}`}>
-                                {route.label}
+                                {t(route.label)}
                             </Link>
                         ))
                     }

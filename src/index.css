@@ -9,6 +9,8 @@
     --color-content-inverse: #f8f6f6;
     --color-content-gray-light: #e0e0e0;
     --color-content-gray-dark: #717171;
+    --shadow-offset: 1.125rem 1.125rem 0 0 #717171;
+    --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #717171;
 
   /* Configurar Montserrat como la fuente sans por defecto */
     --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
@@ -23,5 +25,9 @@
         --color-content-inverse: #121212;
         --color-content-gray-light: #1f1f1f;
         --color-content-gray-dark: #8E8E8E;
+        --shadow-offset: 1.125rem 1.125rem 0 0 #8E8E8E;
+        --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #8E8E8E;
     }
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
