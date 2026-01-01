@@ -1,3 +1,3 @@
 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 18.75L18.75 25M18.75 25L25 18.75M18.75 25V10C18.75 8.67392 18.2232 7.40215 17.2855 6.46447C16.3479 5.52678 15.0761 5 13.75 5H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 18.75L18.75 25M18.75 25L25 18.75M18.75 25V10C18.75 8.67392 18.2232 7.40215 17.2855 6.46447C16.3479 5.52678 15.0761 5 13.75 5H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -1,9 +1,21 @@
 {
     "NAV": {
         "ABOUT": "Sobre mí",
-        "PROJECTS": "Proyectos",
+        "EXPERIENCE": "Experiencia",
         "CONTACT": "Contacto"
     },
+    "TIMELINE": {
+        "DATE1": "Agosto 2019 - Enero 2025",
+        "TITLE1": "Instituto Tecnológico de Toluca",
+        "DESC1": "🎓 Ingeniería en Sistemas Computacionales"
+    },
     "CAREER":"Ingeniero en Sistemas Computacionales",
-    "DESCRPERSONAL" : "Hola, soy Noel Jenaro Ortega Aguilar y enfoco mis conocimientos en el desarrollo web y móvil. Me considero un profesional en constante crecimiento, apasionado por explorar a fondo nuevas áreas de la informática y adquirir experiencia valiosa."
+    "DESCRPERSONAL" : "Hola, soy Noel Jenaro Ortega Aguilar y enfoco mis conocimientos en el desarrollo web y móvil. Me considero un profesional en constante crecimiento, apasionado por explorar a fondo nuevas áreas de la informática y adquirir experiencia valiosa.",
+    "ACERCAMI":"Acerca de mí",
+    "MISHABILIDADES":"Mis Habilidades",
+    "DESARRWEBMOVIL":"Desarrollo Web y Móvil",
+    "DESARRBACK": "Desarrollo Backend",
+    "HERRDEVOPS": "Herramientas y DevOps",
+    "TRAINING":"Formación",
+    "MASINFO": "Más información"
 }

@@ -1,5 +1,5 @@
-import Content from "../components/layout/Content";
-import Card from "../components/ui/Card";
+import Content from "@/components/layout/Content";
+import Card from "@/components/ui/Card";
 
 function Home() {
     return (

@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router";
-import { NAV_MENUS } from "../../data/navMenu";
-import type { NavbarProps } from "../../types/nav";
+import { NAV_MENUS } from "@/data/navMenu";
+import type { NavbarProps } from "@/types/nav";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
@@ -10,10 +9,6 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
     const routes = NAV_MENUS[section] ?? [];
     const menuRef = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
-
-    routes.forEach((r)=>{
-        console.log(r.label);
-    })
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -30,7 +25,7 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
 
     return (
         <>
-            <nav className="hidden md:flex gap-2.5 text-content-gray-dark flex-wrap relative">
+            <nav className="hidden md:flex gap-2 text-content-gray-dark flex-wrap relative">
                 {routes.map((route) => {
                     const active = location === route.href;
 
@@ -38,21 +33,9 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
                         <Link
                             to={route.href}
                             key={route.href}
-                            className="relative text-3xl px-4 py-2.5 text-content"
+                            className="relative md:text-xl lg:text-2xl px-4 py-1 text-content-gray-dark"
                         >
-                            {active && (
-                                <motion.div
-                                    layoutId="navbar-highlight"
-                                    className="absolute inset-0 bg-surface-inverse rounded-lg"
-                                    transition={{
-                                        type: "spring",
-                                        stiffness: 380,
-                                        damping: 30
-                                    }}
-                                />
-                            )}
-
-                            <span className={`relative z-10 ${active ? "text-content-gray-light font-bold" : ""}`}>
+                            <span className={`relative z-10 ${active ? "text-content font-bold" : ""}`}>
                                 {t(route.label)}
                             </span>
                         </Link>
