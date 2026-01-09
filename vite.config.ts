@@ -5,16 +5,19 @@ import svgr from 'vite-plugin-svgr'
 import path from 'path'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
-    react(), 
+    react(),
     tailwindcss(),
-    svgr()
+    svgr(),
   ],
-  base: '/mi-portafolio/',
+
+  // base distinto para dev y prod
+  base: mode === 'production' ? '/mi-portafolio/' : '/',
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-    }
-  }
-})
+    },
+  },
+}))
