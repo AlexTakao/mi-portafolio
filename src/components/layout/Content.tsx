@@ -13,7 +13,7 @@ function Content() {
     const cardMapContent: Record<CardOption, React.ReactNode> = {
         1: <SkillsSection />,
         2: <TrainingSection />,
-        3: <div className="font-bold">Proyectos, próximamente...</div>
+        3: <div className="font-bold text-content">Proyectos, próximamente...</div>
     }
 
     const opciones = [
@@ -24,7 +24,7 @@ function Content() {
 
     return (
         <div className="flex flex-col gap-4 md:gap-10 md:grid md:grid-cols-3">
-            <div>
+            <div className="md:sticky md:top-24 md:self-start">
                 <div className="flex flex-col text-content">
                     <div className="hidden md:flex flex-row gap-2.5 py-2.5 items-center">
                         <h1 className="text-[1.75rem] font-medium italic">{t('ACERCAMI')}</h1>

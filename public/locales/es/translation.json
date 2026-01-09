@@ -7,7 +7,16 @@
     "TIMELINE": {
         "DATE1": "Agosto 2019 - Enero 2025",
         "TITLE1": "Instituto Tecnológico de Toluca",
-        "DESC1": "🎓 Ingeniería en Sistemas Computacionales"
+        "DESC1": "🎓 Ingeniería en Sistemas Computacionales",
+        "DATE2": "Noviembre 2023",
+        "TITLE2": "Introducción a la Ciberseguridad",
+        "DESC2": "💻 Cisco Networking Academy - Certificación de Introducción a la Ciberseguridad",
+        "DATE3": "Noviembre 2023",
+        "TITLE3": "Introducción a la Ciencia de Datos",
+        "DESC3": "📊 Cisco Networking Academy - Certificación de Introducción a la Ciencia de Datos",
+        "DATE4": "Mayo 2023",
+        "TITLE4": "CCNA: Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas",
+        "DESC4": "🌐 Cisco Networking Academy - Certificación CCNA"
     },
     "CAREER":"Ingeniero en Sistemas Computacionales",
     "DESCRPERSONAL" : "Hola, soy Noel Jenaro Ortega Aguilar y enfoco mis conocimientos en el desarrollo web y móvil. Me considero un profesional en constante crecimiento, apasionado por explorar a fondo nuevas áreas de la informática y adquirir experiencia valiosa.",
@@ -17,5 +26,7 @@
     "DESARRBACK": "Desarrollo Backend",
     "HERRDEVOPS": "Herramientas y DevOps",
     "TRAINING":"Formación",
-    "MASINFO": "Más información"
+    "MASINFO": "Más información",
+    "ESTUDIOS": "Estudios",
+    "CERTIFICACIONES": "Certificaciones"
 }

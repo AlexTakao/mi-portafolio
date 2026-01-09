@@ -5,12 +5,13 @@ import "./i18n";
 
 import App from "./App";
 import Home from "./pages/Home";
-import Proyectos from "./pages/Proyectos";
+import Experience from "./pages/Experience";
 
 import {
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
+import Contact from "./pages/Contact";
 
 const router = createHashRouter([
   {
@@ -22,9 +23,13 @@ const router = createHashRouter([
         element: <Home />,
       },
       {
-        path: "projects",
-        element: <Proyectos />,
+        path: "experience",
+        element: <Experience />,
       },
+      {
+        path: "contact",
+        element: <Contact />,
+      }
     ],
   },
 ]);

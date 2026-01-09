@@ -11,6 +11,7 @@ export default defineConfig({
     tailwindcss(),
     svgr()
   ],
+  base: '/mi-portafolio/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

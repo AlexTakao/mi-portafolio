@@ -1,33 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "tailwindcss";
 
+/* ================================
+   THEME TOKENS (CSS VARIABLES)
+================================ */
 @theme {
-  /* Declarar colores personalizados */
-    --color-surface: #f8f6f6;
-    --color-surface-inverse: #121212;
-    --color-content: #121212;
-    --color-content-inverse: #f8f6f6;
-    --color-content-gray-light: #e0e0e0;
-    --color-content-gray-dark: #717171;
-    --shadow-offset: 1.125rem 1.125rem 0 0 #717171;
-    --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #717171;
+  /* Superficies */
+  --color-surface: #f8f6f6;
+  --color-surface-inverse: #121212;
 
-  /* Configurar Montserrat como la fuente sans por defecto */
-    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  /* Contenido */
+  --color-content: #121212;
+  --color-content-inverse: #f8f6f6;
+
+  /* Grises semánticos */
+  --color-content-gray-light: #e0e0e0;
+  --color-content-gray-dark: #717171;
+
+  /* Sombras */
+  --shadow-offset: 1.125rem 1.125rem 0 0 #717171;
+  --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #717171;
+
+  /* Fuente base */
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* ================================
+  DARK MODE OVERRIDES
+================================ */
 @layer base {
-    /* Configuraciones del modo oscuro */
-    .dark {
-        --color-surface: #121212;
-        --color-surface-inverse: #f8f6f6;
-        --color-content: #f8f6f6;
-        --color-content-inverse: #121212;
-        --color-content-gray-light: #1f1f1f;
-        --color-content-gray-dark: #8E8E8E;
-        --shadow-offset: 1.125rem 1.125rem 0 0 #8E8E8E;
-        --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #8E8E8E;
-    }
+  .dark {
+    --color-surface: #121212;
+    --color-surface-inverse: #f8f6f6;
+
+    --color-content: #f8f6f6;
+    --color-content-inverse: #121212;
+
+    --color-content-gray-light: #1f1f1f;
+    --color-content-gray-dark: #8e8e8e;
+
+    --shadow-offset: 1.125rem 1.125rem 0 0 #8e8e8e;
+    --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #8e8e8e;
+  }
 }
 
+/* Permite usar dark: sin repetir selectores */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================
+  TAILWIND UTILITIES (DESIGN TOKENS)
+================================ */
+@layer utilities {
+  /* Textos */
+  .text-content {
+    color: var(--color-content);
+  }
+
+  .text-content-inverse {
+    color: var(--color-content-inverse);
+  }
+
+  .text-content-gray-light {
+    color: var(--color-content-gray-light);
+  }
+
+  .text-content-gray-dark {
+    color: var(--color-content-gray-dark);
+  }
+
+  /* Fondos */
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .bg-surface-inverse {
+    background-color: var(--color-surface-inverse);
+  }
+
+  /* Bordes */
+  .border-content {
+    border-color: var(--color-content);
+  }
+
+  .border-content-gray {
+    border-color: var(--color-content-gray-dark);
+  }
+
+  /* Sombras */
+  .shadow-offset {
+    box-shadow: var(--shadow-offset);
+  }
+
+  .shadow-offset-sm {
+    box-shadow: var(--shadow-offset-sm);
+  }
+}

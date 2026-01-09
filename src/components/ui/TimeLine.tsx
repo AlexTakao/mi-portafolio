@@ -1,35 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { TRAININGS } from "@/data/formacion";
 
-type TimelineEntry = {
-    date: string;
-    title: string;
-    description: string;
-    link?: string;
-};
-
-type TimelineBlock = {
-    titulo: string;
-    items: TimelineEntry[];
-};
-
-const items: TimelineBlock[] = [
-    {
-        titulo: "Estudios",
-        items: [
-            {
-                date: "TIMELINE.DATE1",
-                title: "TIMELINE.TITLE1",
-                description: "TIMELINE.DESC1",
-            },
-            {
-                date: "TIMELINE.DATE2",
-                title: "TIMELINE.TITLE2",
-                description: "TIMELINE.DESC2",
-            }
-        ]
-    }
-];
-
+const items = TRAININGS;
 
 function Timeline() {
     const { t } = useTranslation();
@@ -41,27 +13,29 @@ function Timeline() {
                         {t(bloque.titulo)}
                     </h2>
 
-                    <ol className="relative border-s border-neutral-300 ps-6">
+                    <ol className="relative border-s border-content-gray ps-6">
                         {bloque.items.map((item) => (
                             <li key={item.title} className="mb-10 last:mb-0">
-                                <span className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-neutral-300 bg-neutral-400" />
+                                <span className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-content-gray bg-content-gray-dark" />
 
-                                <time className="text-sm text-neutral-500">
+                                <time className="text-sm text-content-gray-dark">
                                     {t(item.date)}
                                 </time>
 
-                                <h3 className="my-2 text-lg font-semibold text-neutral-900">
+                                <h3 className="my-2 text-lg font-semibold text-content">
                                     {t(item.title)}
                                 </h3>
 
-                                <p className="text-neutral-600">
+                                <p className="text-content-gray-dark">
                                     {t(item.description)}
                                 </p>
 
                                 {item.link && (
                                     <a
                                         href={item.link}
-                                        className="mt-4 inline-flex items-center rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-100"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-4 inline-flex items-center rounded-md border border-content-gray px-4 py-2 text-sm font-medium text-content hover:bg-surface-inverse hover:text-content-inverse"
                                     >
                                         {t("MASINFO")}
                                         <svg
