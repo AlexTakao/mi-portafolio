@@ -19,7 +19,8 @@
         "DESC4": "🌐 Cisco Networking Academy - Certificación CCNA"
     },
     "CAREER":"Ingeniero en Sistemas Computacionales",
-    "DESCRPERSONAL" : "Hola, soy Noel Jenaro Ortega Aguilar y enfoco mis conocimientos en el desarrollo web y móvil. Me considero un profesional en constante crecimiento, apasionado por explorar a fondo nuevas áreas de la informática y adquirir experiencia valiosa.",
+    "DESCRPERSONAL1" : "Hola, soy ",
+    "DESCRPERSONAL2": " y enfoco mis conocimientos en el desarrollo web y móvil. Me considero un profesional en constante crecimiento, apasionado por explorar a fondo nuevas áreas de la informática y adquirir experiencia valiosa.",
     "ACERCAMI":"Acerca de mí",
     "MISHABILIDADES":"Mis Habilidades",
     "DESARRWEBMOVIL":"Desarrollo Web y Móvil",
@@ -28,5 +29,25 @@
     "TRAINING":"Formación",
     "MASINFO": "Más información",
     "ESTUDIOS": "Estudios",
-    "CERTIFICACIONES": "Certificaciones"
+    "CERTIFICACIONES": "Certificaciones",
+    "PROYECTOS": "Proyectos",
+    "PROJECTS": {
+        "PROYESCOLARPERSONAL": "Proyecto Escolar y Personal",
+        "APPMOVILCONSUMOAGUA": "Aplicación móvil para el consumo de agua",
+        "DESCRIPCIONAPPMOVILCONSUMOAGUA": "Desarrollé una aplicación móvil para visualizar el consumo mensual de agua, permitiendo monitorear su uso y fomentar hábitos sustentables. La app incluye gráficos interactivos, seguimiento histórico y notificaciones para promover el ahorro de agua.",
+        "CARACTERISTICAAPPMOVILCONSUMOAGUA1": "Visualización en tiempo real",
+        "CARACTERISTICAAPPMOVILCONSUMOAGUA2": "Historial de consumo",
+        "CARACTERISTICAAPPMOVILCONSUMOAGUA3": "Gráficos interactivos",
+        "CARACTERISTICAAPPMOVILCONSUMOAGUA4": "Metas personalizadas",
+        "PUNTODEVENTA": "Sistema de Punto de Venta",
+        "NOMBREPUNTODEVENTA": "VentaFacil",
+        "DESCRIPCIONPUNTODEVENTA": "Desarrollé un sistema de punto de venta. El sistema permite gestionar inventarios, procesar ventas, generar reportes y administrar clientes de manera eficiente.",
+        "CARACTERISTICAPUNTODEVENTA1": "Gestión de inventarios",
+        "CARACTERISTICAPUNTODEVENTA2": "Procesamiento de ventas",
+        "CARACTERISTICAPUNTODEVENTA3": "Generación de reportes",
+        "CARACTERISTICAPUNTODEVENTA4": "Administración de clientes"
+    },
+    "APPMOVIL":"Aplicación Móvil",
+    "TECNOLOGIASUTILIZADAS":"Tecnologías Utilizadas",
+    "CARACTPRINCIPALES":"Características Principales"
 }
