@@ -51,7 +51,7 @@ function Projects() {
                         <div className="flex justify-center items-center w-full">
                             <img
                                 className="max-w-full object-contain mt-4 md:mt-0 max-h-96"
-                                src={proyecto.image ? `/projects/${proyecto.image}` : '/projects/default.png'}
+                                src={proyecto.image ? `${import.meta.env.BASE_URL}projects/${proyecto.image}` : '/projects/default.png'}
                                 alt="Aqualink project"
                                 loading="lazy"
                             />
