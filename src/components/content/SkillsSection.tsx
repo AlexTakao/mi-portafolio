@@ -1,5 +1,5 @@
 import { SKILLS } from "@/data/skills";
-import Gallery from "../ui/Gallery";
+import IconGroupList from "../ui/IconGroupList";
 import { useTranslation } from "react-i18next";
 
 function SkillsSection() {
@@ -9,7 +9,7 @@ function SkillsSection() {
         <>
             <h1 className="text-content text-2xl font-bold">{t('MISHABILIDADES')}</h1>
             <div className="w-full">
-                <Gallery contenido={skills} />
+                <IconGroupList contenido={skills} />
             </div>
         </>
     )

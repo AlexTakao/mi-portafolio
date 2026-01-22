@@ -15,7 +15,9 @@
 
   /* Grises semánticos */
   --color-content-gray-light: #e0e0e0;
+  --color-content-gray-light-inverse: #1f1f1f;
   --color-content-gray-dark: #717171;
+  --color-content-gray-dark-inverse: #8e8e8e;
 
   /* Sombras */
   --shadow-offset: 1.125rem 1.125rem 0 0 #717171;
@@ -37,7 +39,10 @@
     --color-content-inverse: #121212;
 
     --color-content-gray-light: #1f1f1f;
+    --color-content-gray-light-inverse: #e0e0e0;
     --color-content-gray-dark: #8e8e8e;
+    --color-content-gray-dark-inverse: #717171;
+    
 
     --shadow-offset: 1.125rem 1.125rem 0 0 #8e8e8e;
     --shadow-offset-sm: 0.3125rem 0.3125rem 0 0 #8e8e8e;
@@ -64,8 +69,16 @@
     color: var(--color-content-gray-light);
   }
 
+  .text-content-gray-light-inverse {
+    color: var(--color-content-gray-light-inverse);
+  }
+
   .text-content-gray-dark {
     color: var(--color-content-gray-dark);
+  }
+
+  .text-content-gray-dark-inverse {
+    color: var(--color-content-gray-dark-inverse);
   }
 
   /* Fondos */
@@ -75,6 +88,22 @@
 
   .bg-surface-inverse {
     background-color: var(--color-surface-inverse);
+  }
+
+  .bg-gray-light {
+    background-color: var(--color-content-gray-light);
+  }
+
+  .bg-gray-light-inverse {
+    background-color: var(--color-content-gray-light-inverse);
+  }
+
+  .bg-gray-dark {
+    background-color: var(--color-content-gray-dark);
+  }
+
+  .bg-gray-dark-inverse {
+    background-color: var(--color-content-gray-dark-inverse);
   }
 
   /* Bordes */

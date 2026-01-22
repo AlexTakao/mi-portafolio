@@ -2,6 +2,9 @@ import CornerRightDown from "./corner-right-down.svg?react";
 import Tool from "./button/tool.svg?react"
 import Academic from "./button/academic.svg?react"
 import Notebook from "./button/notebook.svg?react"
+import Phone from "./button/phone.svg?react"
+import Github from "./button/github.svg?react"
+import Code from "./button/code.svg?react"
 import { SiAngular, SiCss3, SiFigma, SiHtml5, SiLaravel, SiTypescript } from "react-icons/si";
 
 export const Icons = {
@@ -15,4 +18,7 @@ export const Icons = {
     angular: SiAngular,
     laravel: SiLaravel,
     figma: SiFigma,
+    phone: Phone,
+    github: Github,
+    code: Code,
 };

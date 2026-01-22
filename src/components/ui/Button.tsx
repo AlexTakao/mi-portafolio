@@ -3,16 +3,33 @@ import { Icons } from "@/assets/index"
 type IconName = keyof typeof Icons;
 
 interface ButtonPrincipalProps {
-    texto: string;
+    texto?: string;
     icon: IconName;
+    sinTexto?: boolean;
+    widthFull?: boolean;
     onClick: () => void;
 }
 
-function ButtonPrincipal({ texto, icon, onClick }: ButtonPrincipalProps) {
+function ButtonPrincipal({ texto, icon, sinTexto = false, widthFull = false, onClick }: ButtonPrincipalProps) {
     return (
-        <button className="flex flex-row px-2.5 py-1 bg-surface text-content shadow-offset-sm border border-surface-inverse w-full gap-1.5 cursor-pointer active:shadow-none" onClick={onClick}>
-            <Icon name={icon} className="max-h-6" /> {texto}
+        <button
+            className={`
+                        flex items-center
+                        px-2.5 py-1
+                        bg-surface text-content
+                        shadow-offset-sm
+                        border border-surface-inverse
+                        gap-1.5
+                        cursor-pointer
+                        active:shadow-none
+                        ${widthFull ? 'w-full' : 'w-auto'}
+                    `}
+            onClick={onClick}
+        >
+            <Icon name={icon} className="max-h-6" />
+            {!sinTexto && texto}
         </button>
+
     );
 }
 

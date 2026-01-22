@@ -1,9 +1,22 @@
 import { useTranslation } from "react-i18next";
-import { TRAININGS } from "@/data/formacion";
 
-const items = TRAININGS;
+type TimelineEntry = {
+    date: string;
+    title: string;
+    description: string;
+    link?: string;
+};
 
-function Timeline() {
+type TimelineBlock = {
+    titulo: string;
+    items: TimelineEntry[];
+};
+
+type TimelineProps = {
+    items: TimelineBlock[];
+};
+
+function Timeline({ items }: TimelineProps) {
     const { t } = useTranslation();
     return (
         <div className="space-y-10">

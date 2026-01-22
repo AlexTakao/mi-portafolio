@@ -1,19 +1,28 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonPrincipal from "@/components/ui/Button";
 import CornerRightDown from "@/assets/corner-right-down.svg?react"
 import SkillsSection from "../content/SkillsSection";
 import TrainingSection from "../content/TrainingSection";
-function Content() {
+import Projects from "@/pages/Projects";
+import Card from "../ui/Card";
+function AboutContent() {
     const { t } = useTranslation();
 
     type CardOption = 1 | 2 | 3;
-    const [opcionCard, setOpcionCard] = useState<CardOption>(1);
+    const [opcionCard, setOpcionCard] = useState<CardOption>(() => {
+        const savedOption = localStorage.getItem('aboutCardOption');
+        return savedOption ? Number(savedOption) as CardOption : 1;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('aboutCardOption', opcionCard.toString());
+    }, [opcionCard]);
 
     const cardMapContent: Record<CardOption, React.ReactNode> = {
         1: <SkillsSection />,
         2: <TrainingSection />,
-        3: <div className="font-bold text-content">Proyectos, próximamente...</div>
+        3: <Projects />,
     }
 
     const opciones = [
@@ -45,12 +54,14 @@ function Content() {
                 </div>
             </div>
             <div className="md:col-span-2">
-                <div className="w-full border border-content p-2 md:py-4 md:px-6 shadow-offset-sm md:shadow-offset">
-                    {cardMapContent[opcionCard]}
-                </div>
+                <Card>
+                    <div className="p-2 md:py-4 md:px-6">
+                        {cardMapContent[opcionCard]}
+                    </div>
+                </Card>
             </div>
         </div>
     );
 }
 
-export default Content;
+export default AboutContent;

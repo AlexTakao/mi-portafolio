@@ -8,14 +8,14 @@ type Datos = {
     items: Item[];
 };
 
-type GalleryProps = {
+type IconGroupListProps = {
     contenido: Datos[];
 };
 
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 
-function Gallery({ contenido }: GalleryProps) {
+function IconGroupList({ contenido }: IconGroupListProps) {
     const { t } = useTranslation();
 
     return (
@@ -43,4 +43,4 @@ function Gallery({ contenido }: GalleryProps) {
     );
 }
 
-export default Gallery;
+export default IconGroupList;
