@@ -49,5 +49,7 @@
     },
     "APPMOVIL":"Aplicación Móvil",
     "TECNOLOGIASUTILIZADAS":"Tecnologías Utilizadas",
-    "CARACTPRINCIPALES":"Características Principales"
+    "CARACTPRINCIPALES":"Características Principales",
+    "DESARROLLADORFULLSTACKJR":"Desarrollador Full Stack Jr.",
+    "DESCEXPRXPERTYS" : "Como desarrollador en RI-XPERTYS, S.A. DE C.V., lideré la transición tecnológica de la aplicación móvil de la empresa, migrándola de Ionic Cordova AngularJS a Ionic Capacitor con Angular , lo que permitió renovar la interfaz y optimizar el desempeño del sistema. Mi labor integró el desarrollo de nuevas funcionalidades en la app y en sitios web publicitarios , trabajando en conjunto con el backend en Spring Boot y Oracle. Además de estas tareas de programación, contribuí activamente en la instalación y configuración de un servidor Windows Server para la migración de sistemas contables y brindé soporte técnico mediante la asesoría y capacitación del nuevo personal de desarrollo."
 }

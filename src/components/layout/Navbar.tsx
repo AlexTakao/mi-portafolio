@@ -43,7 +43,7 @@ function Navbar({ section = 'home', openMenu, setOpenMenu }: NavbarProps) {
                 })}
             </nav>
             <nav ref={menuRef}
-                className={`absolute top-full left-0 w-full
+                className={`absolute top-full left-0 w-full z-50
                             md:hidden
                             transition-all duration-300
                             overflow-hidden

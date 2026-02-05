@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "tailwindcss";
 
+
 /* ================================
-   THEME TOKENS (CSS VARIABLES)
+  THEME TOKENS (CSS VARIABLES)
 ================================ */
 @theme {
   /* Superficies */

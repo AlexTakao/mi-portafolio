@@ -2,8 +2,10 @@ import { useTranslation } from "react-i18next";
 
 type TimelineEntry = {
     date: string;
+    endDate?: Date;
     title: string;
     description: string;
+    otherContentChild?: React.ReactNode;
     link?: string;
 };
 
@@ -18,9 +20,24 @@ type TimelineProps = {
 
 function Timeline({ items }: TimelineProps) {
     const { t } = useTranslation();
+    const dateNow = new Date();
+
+    const itemsSorted = items.map((bloque) => {
+        const sortedItems = [...bloque.items].sort((a, b) => {
+            const dateA = a.endDate ?? dateNow;
+            const dateB = b.endDate ?? dateNow;
+            return dateB.getTime() - dateA.getTime();
+        });
+
+        return {
+            ...bloque,
+            items: sortedItems,
+        };
+    });
+
     return (
         <div className="space-y-10">
-            {items.map((bloque) => (
+            {itemsSorted.map((bloque) => (
                 <section key={bloque.titulo}>
                     <h2 className="text-lg font-semibold text-content">
                         {t(bloque.titulo)}
@@ -42,6 +59,8 @@ function Timeline({ items }: TimelineProps) {
                                 <p className="text-content-gray-dark">
                                     {t(item.description)}
                                 </p>
+
+                                {item.otherContentChild && item.otherContentChild}
 
                                 {item.link && (
                                     <a
