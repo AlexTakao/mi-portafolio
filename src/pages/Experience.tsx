@@ -37,21 +37,39 @@ function Experience() {
     }));
     return (
         <div className="w-full py-2.5 px-6 md:px-36 grid md:grid-cols-[1fr_auto] mb-2">
-            <Card>
-                <div className="p-4">
-                    <Timeline items={items} />
-                </div>
-            </Card>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+                <Card>
+                    <div className="p-4">
+                        <Timeline items={items} />
+                    </div>
+                </Card>
+            </motion.div>
             <div className="hidden lg:block w-96">
                 <motion.div
                     className="sticky top-20"
+                    initial={{ opacity: 0, x: 30 }}
                     animate={{
-                        y: [0, -20, 0], // Sube 20 pixeles y vuelve a bajar
+                        opacity: 1,
+                        x: 0,
+                        y: [0, -20, 0],
                     }}
                     transition={{
-                        duration: 3,      // Tiempo que tarda una vuelta completa
-                        repeat: Infinity, // Se repite para siempre
-                        ease: "easeInOut" // Suaviza el inicio y el final del movimiento
+                        opacity: { duration: 0.6, ease: "easeOut" },
+                        x: { duration: 0.6, ease: "easeOut" },
+                        y: {
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.6
+                        }
+                    }}
+                    whileHover={{ 
+                        scale: 1.05,
+                        transition: { duration: 0.3 }
                     }}
                 >
                     <picture>

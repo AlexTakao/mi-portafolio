@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 type TimelineEntry = {
     date: string;
@@ -37,15 +38,34 @@ function Timeline({ items }: TimelineProps) {
 
     return (
         <div className="space-y-10">
-            {itemsSorted.map((bloque) => (
-                <section key={bloque.titulo}>
+            {itemsSorted.map((bloque, bloqueIndex) => (
+                <motion.section 
+                    key={bloque.titulo}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ 
+                        delay: bloqueIndex * 0.1,
+                        duration: 0.4,
+                        ease: "easeOut"
+                    }}
+                >
                     <h2 className="text-lg font-semibold text-content">
                         {t(bloque.titulo)}
                     </h2>
 
                     <ol className="relative border-s border-content-gray ps-6">
-                        {bloque.items.map((item) => (
-                            <li key={item.title} className="mb-10 last:mb-0">
+                        {bloque.items.map((item, itemIndex) => (
+                            <motion.li 
+                                key={item.title} 
+                                className="mb-10 last:mb-0"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ 
+                                    delay: bloqueIndex * 0.1 + itemIndex * 0.08,
+                                    duration: 0.3,
+                                    ease: "easeOut"
+                                }}
+                            >
                                 <span className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-content-gray bg-content-gray-dark" />
 
                                 <time className="text-sm text-content-gray-dark">
@@ -63,11 +83,13 @@ function Timeline({ items }: TimelineProps) {
                                 {item.otherContentChild && item.otherContentChild}
 
                                 {item.link && (
-                                    <a
+                                    <motion.a
                                         href={item.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="mt-4 inline-flex items-center rounded-md border border-content-gray px-4 py-2 text-sm font-medium text-content hover:bg-surface-inverse hover:text-content-inverse"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
                                     >
                                         {t("MASINFO")}
                                         <svg
@@ -83,12 +105,12 @@ function Timeline({ items }: TimelineProps) {
                                                 d="M5 12h14m-4 4 4-4-4-4"
                                             />
                                         </svg>
-                                    </a>
+                                    </motion.a>
                                 )}
-                            </li>
+                            </motion.li>
                         ))}
                     </ol>
-                </section>
+                </motion.section>
             ))}
         </div>
     );
